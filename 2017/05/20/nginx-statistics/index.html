@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LikeCode</title>
+  <title>统计网站的PV、UV、独立IP | LikeCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LikeCode">
-<meta property="og:url" content="http://xiaodekaixin.github.io/index.html">
+  <meta name="description" content="一、概念介绍： UV(Unique Visitor)：独立访客，将每个独立上网电脑（以cookie为依据）视为一位访客，一天之内（00:00-24:00），访问您网站的访客数量。一天   之内相同cookie的访问只被计算1次 PV(Page View)：访问量,即页面浏览量或者点击量,用户每次对网站的访问均被记录1次。用户对同一页面的多次访问，访问量值累计 独立IP：00:00-24:00内相同">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计网站的PV、UV、独立IP">
+<meta property="og:url" content="http://xiaodekaixin.github.io/2017/05/20/nginx-statistics/index.html">
 <meta property="og:site_name" content="LikeCode">
+<meta property="og:description" content="一、概念介绍： UV(Unique Visitor)：独立访客，将每个独立上网电脑（以cookie为依据）视为一位访客，一天之内（00:00-24:00），访问您网站的访客数量。一天   之内相同cookie的访问只被计算1次 PV(Page View)：访问量,即页面浏览量或者点击量,用户每次对网站的访问均被记录1次。用户对同一页面的多次访问，访问量值累计 独立IP：00:00-24:00内相同">
+<meta property="og:updated_time" content="2017-05-20T08:16:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LikeCode">
+<meta name="twitter:title" content="统计网站的PV、UV、独立IP">
+<meta name="twitter:description" content="一、概念介绍： UV(Unique Visitor)：独立访客，将每个独立上网电脑（以cookie为依据）视为一位访客，一天之内（00:00-24:00），访问您网站的访客数量。一天   之内相同cookie的访问只被计算1次 PV(Page View)：访问量,即页面浏览量或者点击量,用户每次对网站的访问均被记录1次。用户对同一页面的多次访问，访问量值累计 独立IP：00:00-24:00内相同">
   
     <link rel="alternate" href="/atom.xml" title="LikeCode" type="application/atom+xml">
   
@@ -59,51 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/20/hello-world/" class="article-date">
-  <time datetime="2017-05-20T08:15:51.000Z" itemprop="datePublished">2017-05-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2017/05/20/hello-world/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://xiaodekaixin.github.io/2017/05/20/hello-world/" data-id="cj2x02a470000f9tpah3fswt5" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-nginx-statistics" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-nginx-statistics" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/20/nginx-statistics/" class="article-date">
   <time datetime="2017-05-20T08:14:06.000Z" itemprop="datePublished">2017-05-20</time>
@@ -116,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/20/nginx-statistics/">统计网站的PV、UV、独立IP</a>
+    <h1 class="article-title" itemprop="name">
+      统计网站的PV、UV、独立IP
     </h1>
   
 
@@ -128,12 +89,10 @@
         <h3 id="一、概念介绍："><a href="#一、概念介绍：" class="headerlink" title="一、概念介绍："></a>一、概念介绍：</h3><ul>
 <li>UV(Unique Visitor)：独立访客，将每个独立上网电脑（以cookie为依据）视为一位访客，一天之内（00:00-24:00），访问您网站的访客数量。一天   之内相同cookie的访问只被计算1次</li>
 <li>PV(Page View)：访问量,即页面浏览量或者点击量,用户每次对网站的访问均被记录1次。用户对同一页面的多次访问，访问量值累计</li>
-<li>独立IP：00:00-24:00内相同IP地址只被计算一次,做网站优化的朋友最关心这个
-        
-          <p class="article-more-link">
-            <a href="/2017/05/20/nginx-statistics/#more">Read More</a>
-          </p>
-        
+<li>独立IP：00:00-24:00内相同IP地址只被计算一次,做网站优化的朋友最关心这个<a id="more"></a>
+<h3 id="二、查询命令"><a href="#二、查询命令" class="headerlink" title="二、查询命令:"></a>二、查询命令:</h3><h5 id="单个链接地址PV统计"><a href="#单个链接地址PV统计" class="headerlink" title="单个链接地址PV统计"></a>单个链接地址PV统计</h5>  [root@localhost logs]# grep index.shtml host.access.log | wc -l<h5 id="总PV量："><a href="#总PV量：" class="headerlink" title="总PV量："></a>总PV量：</h5>  [root@localhost logs]# awk ‘{print $6}’ host.access.log | wc -l<h5 id="独立IP"><a href="#独立IP" class="headerlink" title="独立IP"></a>独立IP</h5>  [root@localhost logs]# awk ‘{print $1}’ host.access.log | sort -r |uniq -c | wc -l<h5 id="UV统计"><a href="#UV统计" class="headerlink" title="UV统计"></a>UV统计</h5>  [root@localhost logs]# awk ‘{print $10}’ host.access.log | sort -r |uniq -c |wc -l</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
@@ -145,10 +104,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
